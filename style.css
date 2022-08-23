@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size:62.5%;    
+  /* --hue: 294;
+
+  --primary-color: hsl(var(--hue), 41%, 47%);
+  --second-color-light: hsl(293, 41%, 92%);
+  --headline: hsl(210, 11%, 15%);
+  --paragraph: hsl(210, 9%, 31%);
+  --brand-beige: hsl(39, 100%, 97%);
+  --brand-light: hsl(calc(var(--hue) - 1), 41%, 92%);
+  --brand-light-2: hsl(calc(var(--hue) - 1), 40%, 96%);
+  --brand-hover: hsl(var(--hue), 41%, 28%); */
+
+}
+
+
+
+html {
+  font-size: 10px;
+  background: url('./assets/fanomas.jpg') no-repeat ;
+  background-position-x: center;
+  background-size: 100%;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+@font-face {
+  font-family: 'Swiss 721 Black Rounded';
+  src: URL('./assets/swiss-721-black-rounded-bt.ttf') format('truetype');
+}
+
+#wrapper {
+  /* width: min(112rem, 100%); 
+  display: grid;*/
+  
+}
+
+header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; 
+  height: 20vh;
+  border: .4rem solid goldenrod;
+}
+
+main {
+ 
+/* width: min(112rem, 100%); */
+border: .4rem solid green;
+display: flex;
+height: 70vh;
+justify-content: center;
+
+
+}
+
+#drumTitle{
+  
+
+
+  width: 90%;
+  max-width: 980px;
+
+}
+
+h1{
+  font-family: 'Swiss 721 Black Rounded';
+  text-transform: uppercase;
+  font-size: 3.4rem;
+  text-shadow: 0 0 .3rem #ff0099;
+}
+
+
+
+.keys {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+
+
+  justify-items: center;
+
+  width: 90%;
+  
+  
+  
+  border: .4rem solid red;
+  
+}
+
+.key {
+  
+  width: 15rem;
+  height: 15rem;
+  
+  border: .4rem solid black;
+  margin: 1rem;
+  font-size: 1.5rem;
+  padding: 3rem 1rem;
+  transition: all .09s ease;
+  
+  text-align: center;
+  color: white;
+  background: rgba(251, 1, 222, 0.353);
+  text-shadow: 0 0 .5rem black;
+}
+ 
+.playing {
+  transform: scale(1.9);
+  border-color: #ff0099;
+  box-shadow: 0 0 rem #ff0099;
+}
+
+kbd {
+  display: block;
+  font-size: 4rem;
+  font-family: 'Swiss 721 Black Rounded';
+ 
+}
+
+.sound {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  color: #000000;
+} 
+
+/* footer {
+  font-size: 1.6rem;
+  padding-top: 6rem;
+  padding-right: 5rem;
+  text-align: right;
+  width: 100%;
+  font-family: 'Swiss 721 Black Rounded';
+
+}
+
+@media (max-width:768px){
+  html {
+    font-size: 50%;
+  }
+}
+*/
+@media (max-width:570px){  
+  
+  .keys{
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+  }
+
+  .key {
+    width: 10rem;
+    height: 10rem;
+    font-size: .5rem;
+    padding: 2rem 1rem;  
+    
+  }
+
+
+
+
+  kbd{
+    font-size: 2rem;
+    padding-bottom: .5rem;
+  }
+
+  .sound {
+    font-size: 1rem;
+  }
+}
