@@ -11,53 +11,51 @@
   <header>
     <div id="drumTitle">
       <h1>Purumpumpá Drum Kit</h1>
+      <p>press, click or type</p>
   </div>
 </header>
-<main>
-  
-  <div class="keys">
-    
-    <div data-key="65" id="buba" class="key" onclick="playSound()">
+<main>  
+  <div class="keys" >    
+    <div data-key="65" class="key" onclick="playSoundOnClick(this)">
       <kbd>A</kbd>
       <p class="sound">cha cha</p>
     </div>
-    <div data-key="83" class="key">
+    <div data-key="83" class="key" onclick="playSoundOnClick(this)">
       <kbd>S</kbd>
       <p class="sound">shiakikiki purumpá</p>
     </div>
-    <div data-key="68" class="key">
+    <div data-key="68" class="key" onclick="playSoundOnClick(this)">
       <kbd>D</kbd>
       <span class="sound">parapu</span>
     </div>
-    <div data-key="70" class="key">
+    <div data-key="70" class="key" onclick="playSoundOnClick(this)">
       <kbd>F</kbd>
       <span class="sound">uiiiunnn uiunn</span>
     </div>
-    <div data-key="71" class="key">
+    <div data-key="71" class="key" onclick="playSoundOnClick(this)">
       <kbd>G</kbd>
       <span class="sound">purumpum-pá?</span>
     </div>
-    <div data-key="72" class="key">
+    <div data-key="72" class="key" onclick="playSoundOnClick(this)">
       <kbd>H</kbd>
       <span class="sound">ah-ah-oh-ah</span>
     </div>
-    <div data-key="74" class="key">
+    <div data-key="74" class="key" onclick="playSoundOnClick(this)">
       <kbd>J</kbd>
       <span class="sound">titi-titi</span>
     </div>
-    <div data-key="75" class="key">
+    <div data-key="75" class="key" onclick="playSoundOnClick(this)">
       <kbd>K</kbd>
-      <span class="sound">da-da-da-da-oh-oh-oh</span>
+      <span class="sound">da-da-da-oh-oh</span>
     </div>
-    <div data-key="76" class="key">
+    <div data-key="76" class="key" onclick="playSoundOnClick(this)">
       <kbd>L</kbd>
-      <span class="sound">u-uuuuullll</span>
+      <span class="sound">u-uuuulll</span>
     </div>    
     </div>
   </main>
-
+<footer>Excertos de faixas dos álbuns Amenaza ao Mundo e Suspended Animation. Todos os direitos pertencem à banda Fantômas. </footer>
   
-
 <audio data-key="65" src="./assets/sounds/cha-cha.wav"></audio>
 <audio data-key="83" src="./assets/sounds/shiakikikikiki_purumpumpumpa.wav"></audio>
 <audio data-key="68" src="./assets/sounds/parapu_parapu.wav"></audio>
@@ -67,7 +65,6 @@
 <audio data-key="74" src="./assets/sounds/chichichichi.wav"></audio>
 <audio data-key="75" src="./assets/sounds/owowow.wav"></audio>
 <audio data-key="76" src="./assets/sounds/uuuuuul.wav"></audio>
-
 
 <script src="./script.js"></script>
 

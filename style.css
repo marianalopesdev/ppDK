@@ -5,27 +5,18 @@
 }
 
 :root {
-  font-size:62.5%;    
-  /* --hue: 294;
+  font-size: 62.5%;
+   --hue: 324;
 
-  --primary-color: hsl(var(--hue), 41%, 47%);
-  --second-color-light: hsl(293, 41%, 92%);
-  --headline: hsl(210, 11%, 15%);
-  --paragraph: hsl(210, 9%, 31%);
-  --brand-beige: hsl(39, 100%, 97%);
-  --brand-light: hsl(calc(var(--hue) - 1), 41%, 92%);
-  --brand-light-2: hsl(calc(var(--hue) - 1), 40%, 96%);
-  --brand-hover: hsl(var(--hue), 41%, 28%); */
-
-}
-
+  --primary-color: hsl(var(--hue), 100%, 50%);
+  --background-color: hsl(calc(var(--hue) - 17), 100%, 65%, 0.784);
+ }
 
 
 html {
-  font-size: 10px;
-  background: url('./assets/fanomas.jpg') no-repeat ;
+  /* background: url('./assets/fanomas.jpg') no-repeat;
   background-position-x: center;
-  background-size: 100%;
+  background-size: 100%; */
 }
 
 html,
@@ -38,93 +29,74 @@ body {
   src: URL('./assets/swiss-721-black-rounded-bt.ttf') format('truetype');
 }
 
-#wrapper {
-  /* width: min(112rem, 100%); 
-  display: grid;*/
-  
-}
-
-header{
+header {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center; 
+  text-align: center;
   height: 20vh;
-  border: .4rem solid goldenrod;
-}
+ }
 
 main {
- 
-/* width: min(112rem, 100%); */
-border: .4rem solid green;
-display: flex;
-height: 70vh;
-justify-content: center;
-
-
+  display: flex;
+  height: 70vh;
+  justify-content: center;
+  align-items: center;
 }
 
-#drumTitle{
-  
-
-
+#drumTitle {
   width: 90%;
   max-width: 980px;
+} 
 
-}
-
-h1{
+h1 {
   font-family: 'Swiss 721 Black Rounded';
   text-transform: uppercase;
-  font-size: 3.4rem;
-  text-shadow: 0 0 .3rem #ff0099;
+  font-size: 4rem;
+  text-shadow: 0 0 .3rem var(--primary-color);
 }
 
-
+p {
+  font-size: 1.4rem;
+}
 
 .keys {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr ;
-
-
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   justify-items: center;
-
   width: 90%;
-  
-  
-  
-  border: .4rem solid red;
-  
 }
 
+.keys :hover{
+   background-color: aquamarine;
+ }
+
 .key {
-  
+  /* border-radius: 50%; */
   width: 15rem;
   height: 15rem;
-  
   border: .4rem solid black;
   margin: 1rem;
   font-size: 1.5rem;
   padding: 3rem 1rem;
   transition: all .09s ease;
-  
+
   text-align: center;
   color: white;
-  background: rgba(251, 1, 222, 0.353);
-  text-shadow: 0 0 .5rem black;
+  background-color: var(--background-color);
+  text-shadow: 0 0 .1rem black;
 }
- 
+
 .playing {
   transform: scale(1.9);
-  border-color: #ff0099;
-  box-shadow: 0 0 rem #ff0099;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 1rem var(--primary-color);
 }
 
 kbd {
   display: block;
   font-size: 4rem;
   font-family: 'Swiss 721 Black Rounded';
- 
 }
 
 .sound {
@@ -132,27 +104,27 @@ kbd {
   text-transform: uppercase;
   letter-spacing: .2rem;
   color: #000000;
-} 
+}
 
-/* footer {
-  font-size: 1.6rem;
-  padding-top: 6rem;
-  padding-right: 5rem;
-  text-align: right;
-  width: 100%;
+footer {
+  display: flex;  
+  height: 10vh;
+  font-size: 1.4rem;
   font-family: 'Swiss 721 Black Rounded';
-
+  align-items: flex-end;
+  padding: 2rem;
+  text-align: right;
+  justify-content: right;
 }
 
-@media (max-width:768px){
-  html {
-    font-size: 50%;
+
+@media (max-width:570px) {
+
+  h1 {
+    font-size: 3.4rem;
   }
-}
-*/
-@media (max-width:570px){  
-  
-  .keys{
+
+  .keys {
     grid-template-columns: repeat(3, minmax(100px, 1fr));
   }
 
@@ -160,19 +132,54 @@ kbd {
     width: 10rem;
     height: 10rem;
     font-size: .5rem;
-    padding: 2rem 1rem;  
-    
+    padding: 2rem 1rem;
   }
 
-
-
-
-  kbd{
+  kbd {
     font-size: 2rem;
     padding-bottom: .5rem;
   }
 
   .sound {
     font-size: 1rem;
+  }
+
+  footer {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width:1600px) {
+
+  .keys {
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+  }
+}
+
+@media (max-height:760px) {
+
+  .keys {
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+  }
+
+  .key {
+    width: 7rem;
+    height: 7rem;
+    font-size: .4rem;
+    padding: 1rem .5rem;
+  }
+
+  kbd {
+    font-size: 1.3rem;
+    padding-bottom: .3rem;
+  }
+
+  .sound {
+    font-size: .7rem;
+  }
+
+  footer {
+    padding-top: 1rem;
+    font-size: 1rem ;
   }
 }
